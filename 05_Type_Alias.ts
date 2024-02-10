@@ -17,7 +17,7 @@ type BoyfriendType = {
 const 남친: BoyfriendType = {
   name: '현우'
 }
-남친.name = '철수'; // 에러는 띄워주지만 컴파일한 .js에서는 동작잘됨
+// 남친.name = '철수'; // 에러는 띄워주지만 컴파일한 .js에서는 동작잘됨
 console.log(남친.name);
 
 // type 변수 union type으로 합치기
