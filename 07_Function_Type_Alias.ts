@@ -26,24 +26,21 @@ let 회원정보 = {
 
 // 숙제
 type CutZeroType = (str: string) => string
-type RemoveDashType = (str: string) => number
 let cutZero: CutZeroType = function (str) {
-  if (str[0] === '0') {
-    return str.slice(1,str.length);
-  } else {
-    return str;
-  }
+  return str.replace(/^0+/g,"");
 }
 console.log(cutZero('0abcd'));
 
+type RemoveDashType = (str: string) => number
 let removeDash: RemoveDashType = function (str) {
   return parseFloat(str.replace(/-/g, ''));
 }
 console.log(removeDash('010-1234-5678'))
 
-type HwFuncType = (a: string, cutZero: CutZeroType, removeDash: RemoveDashType) => number
+type HwFuncType = (a: string, cutZero: CutZeroType, removeDash: RemoveDashType) => void
 
 let HwFunc:HwFuncType = function (str, cutZero, removeDash) {
-  return removeDash(cutZero(str));
+  console.log(removeDash(cutZero(str)));
 }
-console.log(HwFunc('010-1111-2222', cutZero, removeDash))
+
+HwFunc('010-1111-2222', cutZero, removeDash);

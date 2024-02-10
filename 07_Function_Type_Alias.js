@@ -11,12 +11,7 @@ var 회원정보 = {
     changeName: function () { }
 };
 var cutZero = function (str) {
-    if (str[0] === '0') {
-        return str.slice(1, str.length);
-    }
-    else {
-        return str;
-    }
+    return str.replace(/^0+/g, "");
 };
 console.log(cutZero('0abcd'));
 var removeDash = function (str) {
@@ -24,6 +19,6 @@ var removeDash = function (str) {
 };
 console.log(removeDash('010-1234-5678'));
 var HwFunc = function (str, cutZero, removeDash) {
-    return removeDash(cutZero(str));
+    console.log(removeDash(cutZero(str)));
 };
-console.log(HwFunc('010-1111-2222', cutZero, removeDash));
+HwFunc('010-1111-2222', cutZero, removeDash);
