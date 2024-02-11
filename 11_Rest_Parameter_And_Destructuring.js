@@ -6,12 +6,12 @@ function sum() {
     }
     console.log(a);
 }
-function 함수(_a) {
+function func12(_a) {
     var student = _a.student, age = _a.age;
     console.log(student, age);
 }
 var obj4 = { student: true, age: 20 };
-함수(obj4);
+func12(obj4);
 // 숙제
 function getMax() {
     var rest = [];

@@ -11,7 +11,7 @@ var data = {
 function func5(a) {
     // kim 이라는 타입만 들어올 수 있음 O
 }
-func5(data.name); // error, data.name은 "kim"이라는 타입이 아님
+// func5(data.name); // error, data.name은 "kim"이라는 타입이 아님
 // 해결책 : as const 키워드
 // 1. object value 값을 그대로 타입으로 지정
 // 2. object 속성들에 모두 readonly를 붙여줌

@@ -13,7 +13,7 @@ let data = {
 function func5(a: "kim"){ // kim 이라는 자료만 들어올 수 있음 X
                           // kim 이라는 타입만 들어올 수 있음 O
 }
-func5(data.name); // error, data.name은 "kim"이라는 타입이 아님
+// func5(data.name); // error, data.name은 "kim"이라는 타입이 아님
 
 
 // 해결책 : as const 키워드

@@ -11,11 +11,11 @@ interface ObjType2 {
   student: boolean;
   age: number;
 }
-function 함수({ student, age }: ObjType2) {
+function func12({ student, age }: ObjType2) {
   console.log(student, age);
 }
 let obj4 = { student: true, age: 20 };
-함수(obj4);
+func12(obj4);
 
 
 // 숙제
