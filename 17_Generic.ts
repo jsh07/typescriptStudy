@@ -1,11 +1,11 @@
 // Generic
-function func12<MyType>(x: MyType[]): MyType {
+function func17<MyType>(x: MyType[]): MyType {
   return x[0];
 }
 
-let a = func12<number>([4,2]);
-let b = func12<string>(["4", "2"]);
-let c = func12(["4", "2"]); // 타입 안적어줘도 됨
+let a = func17<number>([4,2]);
+let b = func17<string>(["4", "2"]);
+let c = func17(["4", "2"]); // 타입 안적어줘도 됨
 console.log(c);
 
 // 타입파라미터 제한두기
@@ -59,15 +59,15 @@ function func15<T extends string | string[]>(a: T) {
   return a.length;
 }
 
-interface Animal2 {
+interface Animal3 {
   name: string;
   age: number;
 }
 let data2 = '{"name" : "dog", "age": 1 }';
-function func16<T extends Animal2>(json:string):T {
+function func16<T extends Animal3>(json:string):T {
   return JSON.parse(json);
 }
-console.log(func16<Animal2>(data2));
+console.log(func16<Animal3>(data2));
 
 class Person4<T> {
   name: T;

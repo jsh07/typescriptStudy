@@ -1,10 +1,10 @@
 // Generic
-function func12(x) {
+function func17(x) {
     return x[0];
 }
-var a = func12([4, 2]);
-var b = func12(["4", "2"]);
-var c = func12(["4", "2"]); // 타입 안적어줘도 됨
+var a = func17([4, 2]);
+var b = func17(["4", "2"]);
+var c = func17(["4", "2"]); // 타입 안적어줘도 됨
 console.log(c);
 // 타입파라미터 제한두기
 // extends : narrowing 인정해줌
