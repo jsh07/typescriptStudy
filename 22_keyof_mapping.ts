@@ -17,7 +17,7 @@ interface Car {
   price: boolean | number
 }
 
-interface TypeChanger <T> {
+type TypeChanger <T> = {
   [key in keyof T]: string;
 }
 
@@ -27,5 +27,16 @@ let obj6: 새로운타입 = {
   model: "kia",
   price: "300"
 }
+
+type Bus = {
+  color: string,
+  model: boolean,
+  price: number
+}
+type BusTypeChanger<T, R> = {
+  [key in keyof T]: R
+}
+type NewBusType = BusTypeChanger<Bus, string | number>;
+
 export { }
 
